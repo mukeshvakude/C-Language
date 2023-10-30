@@ -1,0 +1,317 @@
+2. Which of these is NOT a relational or logical operator?
+
+a. =
+
+b. ||
+
+c. ==
+
+d. !=
+
+// find out Ansawer
+
+
+3. What will be the output of the following C code?
+
+#include<stdio.h>
+
+int main()
+
+{
+
+int p = 1, q = 2, r = 3, s = 4, x;
+
+e = r + s = q * p;
+
+printf(“%d, %d\n”, x, s);
+
+}
+
+a. Syntax error
+
+b. 5, 2
+
+c. 7, 2
+
+d. 7, 4
+
+// find out Ansawer
+
+
+4. Out of the following, which one is not valid as an if statement?
+
+a. if ((char) x){}
+
+b. if (x){}
+
+c. if (func1 (x)){}
+
+d. if (if (x == 1)){}
+
+// find out Ansdwer 
+
+
+5. We cannot use the keyword ‘break’ simply within _________.
+
+a. while
+
+b. for
+
+c. if-else
+
+d. do-while
+
+// find out Anscwer
+
+
+6. The output of the C code mentioned below would be:
+
+#include <stdio.h>
+
+int main()
+
+{
+
+	int a = 0, b = 0;
+	
+	l1: while (a < 2)
+	
+	{
+		
+		a++;
+		
+		while (b < 3)
+		
+		{
+		
+			printf(“find\n”);
+			
+			goto l1;
+		
+		}
+	
+	}
+
+}
+
+a. loop loop find loop
+
+b. Infinite error
+
+c. find loop
+
+d. Compile time loop
+
+// find out Anscwer
+
+
+7. The global variables are ____________.
+
+a. External
+
+b. Internal
+
+c. Both External and Internal
+
+d. None of the above
+
+// find out Ansawer
+
+
+
+8. Out of the following operations, which one is not possible in the case of a register variable?
+
+
+a. Global declaration of the register variable
+
+b. Copying the value from the memory variable
+
+c. Reading any value into the register variable
+
+d. All of the above
+
+// find out Ansdwer
+
+
+
+9. The #include <stdio.h> is a ______________.
+
+a. Inclusion directive
+
+b. File inclusion directive
+
+c. Preprocessor directive
+
+d. None of the above
+
+// find out Anscwer
+
+
+10. Which of these properties of #define is false?
+
+a. These always obey the scope rules
+
+b. We can make use of a pointer to #define
+
+c. The #define can be externally available
+
+d. All of the above
+
+// find out Ansdwer
+
+
+
+11. The correct format of declaring a function is:
+
+a. type_of_return name_of_function (argument type);
+
+b. type_of_return name_of_function (argument type){}
+
+c. type_of_return (argument type) name_of_function;
+
+d. all of the above
+
+// find out Ansawer
+
+
+12. Out of the following function definition, which one will run correctly?
+
+a.
+
+int sum(int x, int y)
+
+return (x + y);
+
+b.
+
+int sum(int x, int y)
+
+{return (x + y);}
+
+c.
+
+int sum(x, y)
+
+return (x + y);
+
+d. none of the above
+
+
+// find out Ansbwer
+
+
+int sum(int x, int y)
+
+{return (x + y);}
+
+
+
+13. Comment on the C statement given below:
+
+int (*p)[5];
+
+a. A ragged array
+
+b. An array “p” of pointers
+
+c. A pointer “p” to an array
+
+d. None of the above
+
+// find out Anscwer
+
+
+
+14. The output of the C code mentioned below would be:
+
+#include <stdio.h>
+
+struct employee
+
+{
+
+int id;
+
+char rank[5];
+
+}
+
+void main()
+
+{
+
+struct employee e;
+
+s.no = 30;
+
+printf(“howdy”);
+
+}
+
+a. hello
+
+b. Compile-time error
+
+c. 5, 30
+
+d. Varies
+
+// find out Ansbwer
+
+
+
+15. Determine what’s true for x, if we define x as “int *x[10];”?
+
+a. This definition will only allocate 10 pointers but will not initialize them
+
+b. The initialization must be explicitly performed
+
+c. The definition will only allocate 10 pointers but will not initialize them. Also, the initialization has to be explicitly performed
+
+d. Error
+
+
+// find out Anscwer
+
+
+
+
+
+
+
+
+16. We can achieve the modulus for float by:
+
+a. x % y
+
+b. modulus(x, y);
+
+c. fmod(x, y);
+
+d. mod(x, y);
+
+Answer: (c) fmod(x, y);
+
+
+
+17. __________ tells a compiler that the data would be defned somewhere and it would be connected to the linker.
+
+a) variable
+
+b) yvals
+
+c) errno
+
+d) extern
+
+ // find out Ansdwer
+
+
+
+
+
+
+
+
+
+

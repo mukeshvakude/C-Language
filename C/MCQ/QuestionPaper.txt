@@ -1,0 +1,871 @@
+1. 
+ What is the range of values that can be stored by int datatype in C?
+
+
+
+
+
+	
+The range of int is from -(2^31) to (2^31) - 1.
+
+2. 
+What will be the output of the following code snippet?
+
+#include <stdio.h>
+int main() {
+	int a = 3, b = 5;
+	int t = a;
+	a = b;
+	b = t;
+	printf("%d %d", a, b);
+	return 0;
+}
+
+
+
+
+Hide
+Correct Answer
+The above code snippet swaps 2 numbers in C.
+
+3. 
+How is an array initialized in C language?
+
+
+
+
+
+Hide
+Correct Answer
+The correct way of initialization of an array is given in Option A.
+
+4. 
+What is the output of the following code snippet?
+
+#include <stdio.h>
+int main() {
+	int a[] = {1, 2, 3, 4};
+	int sum = 0;
+	for(int i = 0; i < 4; i++) {
+	    sum += a[i];
+	}
+	printf("%d", sum);
+	return 0;
+}
+
+
+
+
+Hide
+Correct Answer
+The code basically calculates the sum of all the elements in the array a[].
+
+5. 
+What is the output of the following code snippet?
+
+int main() {
+	int sum = 2 + 4 / 2 + 6 * 2;
+	printf("%d", sum);
+	return 0;
+}
+
+
+
+
+Hide
+Correct Answer
+Following the BEDMAS rule for grouping arithmetic expressions, we get 16 as the answer.
+
+6. 
+How is the 3rd element in an array accessed based on pointer notation?
+
+
+
+
+
+Hide
+Correct Answer
+a[3] in C is equivalent to *(a + 3) in pointer notation.
+
+7. 
+How are String represented in memory in C?
+
+
+
+
+
+Hide
+Correct Answer
+A string is represented internally as an array of characters.
+
+8. 
+What will be the output of the following code snippet?
+
+#include <stdio.h>
+void solve() {
+    int a[] = {1, 2, 3, 4, 5};
+    int sum = 0;
+    for(int i = 0; i < 5; i++) {
+        if(i % 2 == 0) {
+            sum += *(a + i);
+        }
+        else {
+            sum -= *(a + i);
+        }
+    }
+    printf("%d", sum);
+}
+int main() {
+	solve();
+	return 0;
+}
+
+
+
+
+Hide
+Wrong Answer
+This is an example of accessing an array element through pointer notation. So *(a + i) is equivalent to a[i], and we are adding all the even indices elements, and subtracting all the elements at odd indices, which gives a result of 3.
+
+9. 
+What will be the output of the following code snippet?
+
+#include <stdio.h>
+void solve() {
+    int first = 10, second = 20;
+    int third = first + second;
+    {
+        int third = second - first;
+        printf("%d ", third);
+    }
+    printf("%d", third);
+}
+int main() {
+	solve();
+	return 0;
+}
+
+
+
+
+Hide
+Correct Answer
+This problem uses the concept of scopes. In the pair of {}, the variable third which is declared inside it is local to the block and takes preference over the global third. So it is printed first, and then the global third.
+
+10. 
+What is the disadvantage of arrays in C?
+
+
+
+
+
+Hide
+Wrong Answer
+The disadvantage of arrays is that the amount of memory to be allocated needs to be known beforehand.
+
+11. 
+What will be the output of the following code snippet?
+
+#include <stdio.h>
+void solve() {
+    int a = 3;
+    int res = a++ + ++a + a++ + ++a;
+    printf("%d", res);
+}
+int main() {
+	solve();
+	return 0;
+}
+
+
+
+
+Hide
+Correct Answer
+The ++a operator follows the “change then use” rule. The a++ operator follows the “use then change” rule. Using these rules along with proper associativity we get the result of 20.
+
+12. 
+What will be the value of x in the following code snippet?
+
+#include <stdio.h>
+void solve() {
+    int x = printf("Hello");
+    printf(" %d", x);
+}
+int main() {
+	solve();
+	return 0;
+}
+
+
+
+
+Hide
+Correct Answer
+The printf function returns the number of characters printed to the standard output, which here is 5.
+
+13. 
+What does the following declaration indicate?
+
+int x: 8;
+
+
+
+
+
+Hide
+Correct Answer
+The above statement defines x as an 8-bit integer.
+
+14. 
+Which of the following is the proper syntax for declaring macros in C?
+
+
+
+
+
+Hide
+Wrong Answer
+Explanation: Option B is the correct syntax for declaring pointers in C.
+
+15. 
+Which of the following is an exit controlled loop?
+
+
+
+
+
+Hide
+Correct Answer
+Explanation: Do-while loop is an exit controlled loop.
+
+16. 
+What is the size of the int data type (in bytes) in C?
+
+
+
+
+
+Hide
+Correct Answer
+Explanation: The int data type in C is of 4 bytes.
+
+17. 
+What will be the output of the following code snippet?
+
+#include <stdio.h>
+void swap(int *a, int *b) {
+    int t = *a;
+    *a = *b;
+    *b = t;
+}
+void solve() {
+    int a = 3, b = 5;
+    swap(&a, &b);
+    printf("%d %d", a, b);
+}
+int main() {
+	solve();
+	return 0;
+}
+
+
+
+
+Hide
+Correct Answer
+Explanation: The above code swaps 2 numbers in C using pointers.
+
+18. 
+How to declare a double-pointer in C?
+
+
+
+
+
+Hide
+Correct Answer
+Explanation: Option B is the correct syntax to define a pointer.
+
+19. 
+If p is an integer pointer with a value 1000, then what will the value of p + 5 be?
+
+
+
+
+
+Hide
+Correct Answer
+Explanation: Since size of an integer is 4bytes, p + 5 will be at value 1000+5 * 4 = 1020.
+
+20. 
+What will be the output of the following code snippet?
+
+#include <stdio.h>
+#define VAL 3 * (2 + 6)
+void solve() {
+    int a = 10 + VAL;
+    printf("%d", a);
+}
+int main() {
+	solve();
+	return 0;
+}
+
+
+
+
+Hide
+Correct Answer
+Explanation: The above code snippet shows the use of macros in C. The expression for VAL is directly put in its place in the code at compile-time and then the expression is evaluated, which gives a value of 34.
+
+21. 
+Which of the following are not standard header files in C?
+
+
+
+
+
+Hide
+Correct Answer
+Explanation: All the above header files are valid header files in C.
+
+22. 
+What will be the output of the following code snippet?
+
+#include <stdio.h>
+void solve() {
+    printf("%d %d", (023), (23));
+}
+int main() {
+    solve();
+	return 0;
+}
+
+
+
+
+Hide
+Wrong Answer
+Explanation: 23 is printed as it is. 023 is interpreted as an octal number which is equivalent to decimal 19.
+
+23. 
+What will be the output of the following code snippet?
+
+#include <stdio.h>
+void solve() {
+    printf("%d %d %d", (076), (28), (0x87));
+}
+int main() {
+    solve();
+	return 0;
+}
+
+
+
+
+Hide
+Correct Answer
+Explanation: The first number is interpreted in octal, the second in decimal, and the third in hexadecimal.
+
+24. 
+What will be the result of the following code snippet?
+
+#include <stdio.h>
+void solve() {
+    char ch[10] = "abcdefghij";
+    int ans = 0;
+    for(int i = 0; i < 10; i++) {
+        ans += (ch[i] - 'a');
+    }
+    printf("%d", ans);
+}
+int main() {
+    solve();
+	return 0;
+}
+
+
+
+
+Hide
+Wrong Answer
+Explanation: The function basically calculates the sum of ASCII values of the characters of the string.
+
+25. 
+What will be the output of the following code snippet?
+
+#include <stdio.h>
+void solve() {
+    bool ok = false;
+    printf(ok ? "YES" : "NO");
+}
+int main() {
+    solve();
+	return 0;
+}
+
+
+
+
+Hide
+Wrong Answer
+Explanation: The bool data type cannot be used in C without including the stdbool.h header.
+
+26. 
+In which of the following languages is function overloading not possible?
+
+
+
+
+
+Hide
+Correct Answer
+Explanation: Function Overloading is not possible in C as it is not an Object-Oriented Language.
+
+27. 
+Which of the following function is used to open a file in C++?
+
+
+
+
+
+Hide
+Correct Answer
+Explanation: fopen is used to open a file in C++.
+
+28. 
+Which of the following are correct file opening modes in C?
+
+
+
+
+
+Hide
+Wrong Answer
+Explanation: All the above options are valid file opening modes in C.
+
+29. 
+What is the return type of the fopen() function in C?
+
+
+
+
+
+Hide
+Wrong Answer
+Explanation: The fopen() function returns a pointer to a FILE object.
+
+30. 
+What will be the output of the following code snippet?
+
+#include <stdio.h>
+void solve() {
+    int ch = 2;
+    switch(ch) {
+        case 1: printf("1 ");
+        case 2: printf("2 ");
+        case 3: printf("3 ");
+        default: printf("None");
+    }
+}
+int main() {
+    solve();
+	return 0;
+}
+
+
+
+
+Hide
+Wrong Answer
+Explanation: This is an example of Fall-Though in switch statements in absence of break statements.
+
+31. 
+What will be the output of the following code snippet?
+
+#include <stdio.h>
+void solve() {
+    int x = 1, y = 2;
+    printf(x > y ? "Greater" : x == y ? "Equal" : "Lesser");
+}
+int main() {
+    solve();
+	return 0;
+}
+
+
+
+
+Hide
+Correct Answer
+Explanation: The above code snippet compares 2 numbers using ternary operators.
+
+32. 
+What will be the output of the following code snippet?
+
+#include <stdio.h>
+void solve() {
+    int n = 24;
+    int l = 0, r = 100, ans = n;
+    while(l <= r) {
+        int mid = (l + r) / 2;
+        if(mid * mid <= n) {
+            ans = mid;
+            l = mid + 1;
+        }
+        else {
+            r = mid - 1;
+        }
+    }
+    printf("%d", ans);
+}
+int main() {
+    solve();
+	return 0;
+}
+
+
+
+
+Hide
+Wrong Answer
+Explanation: The code snippet basically uses binary search to calculate the floor of the square root of a number. Since the square root is an increasing function, so binary search is applicable here. Here, for n = 24, the answer is 4.
+
+33. 
+What will be the output of the following code snippet?
+
+#include <stdio.h>
+void solve() {
+    printf("%d ", 9 / 2);
+    printf("%f", 9.0 / 2);
+}
+int main() {
+    solve();
+	return 0;
+}
+
+
+
+
+Hide
+Correct Answer
+Explanation: The first print statement implicitly converts the result to int type before printing it. Similarly, the 2nd print statement implicitly converts the result to float type before printing it.
+
+34. 
+What will be the output of the following code snippet?
+
+#include <stdio.h>
+void solve() {
+    int x = 2;
+    printf("%d", (x << 1) + (x >> 1));
+}
+int main() {
+    solve();
+	return 0;
+}
+
+
+
+
+Check Answer
+Explanation: The above example uses the knowledge of bitwise shift operators. (x << 1) is equivalent to x * 2 and (x >> 1) is equivalent to x / 2. So the result is 2 * 2 + 2 / 2 = 5.
+
+35. 
+What will be the output of the following code snippet?
+
+#include <stdio.h>
+#define VAL 5
+int getInput() {
+    return VAL;
+}
+void solve() {
+    const int x = getInput();
+    printf("%d", x);
+}
+int main() {
+    solve();
+	return 0;
+}
+
+
+
+
+Check Answer
+Explanation: The above code snippet will return the value of VAL from the getInput() method which in turn gets printed in solve().
+
+36. 
+How to find the length of an array in C?
+
+
+
+
+
+Check Answer
+Explanation: sizeof operator returns the memory accessed by the variable within it. The total memory accessed by the array divided by memory accessed by its individual element will give the length of the array.
+
+37. 
+Which of the following is not a storage class specifier in C?
+
+
+
+
+
+Check Answer
+Explanation: Volatile is not a storage class specifier in C.
+
+38. 
+What will be the output of the following code snippet?
+
+#include <stdio.h>
+void solve(int x) {
+    if(x == 0) {
+        printf("%d ", x);
+        return;
+    }
+    printf("%d ", x);
+    solve(x - 1);
+    printf("%d ", x);
+}
+int main() {
+    solve(3);
+	return 0;
+}
+
+
+
+
+Check Answer
+Explanation: First all the print functions before the recursive call gets executed and then all the print functions after the recursive calls get executed.
+
+39. 
+What will be the output of the following code snippet?
+
+#include <stdio.h>
+int search(int l, int r, int target, int a[]) {
+    int mid = (l + r) / 2;
+    if(a[mid] == target) {
+        return mid;
+    }
+    else if(a[mid] < target) {
+        return search(mid + 1, r, target, a);
+    }
+    else {
+        return search(0, mid - 1, target, a);
+    }
+}
+void solve() {
+    int a[] = {1, 2, 3, 4, 5};
+    printf("%d", search(0, 5, 3, a));
+}
+int main() {
+    solve();
+	return 0;
+}
+
+
+
+
+Check Answer
+Explanation: The above function is basically a recursive implementation of binary search and returns the index of the target element 3, which is at index 2 in the array(0-based indexing).
+
+40. 
+What will be the output of the following code snippet?
+
+#include <stdio.h>
+int get(int n) {
+    if(n <= 1) {
+        return n;
+    }
+    return get(n - 1) + get(n - 2);
+}
+void solve() {
+    int ans = get(6);
+    printf("%d", ans);
+}
+int main() {
+    solve();
+	return 0;
+}
+
+
+
+
+Check Answer
+Explanation: The above code calculates the nth Fibonacci number recursively. So, the answer is 8.
+
+41. 
+What is the output of the following code snippet?
+
+#include <stdio.h>
+#include<stdlib.h>
+void set(int *to) {
+    to = (int*)malloc(5 * sizeof(int));
+}
+void solve() {
+    int *ptr;
+    set(ptr);
+    *ptr = 10;
+    printf("%d", *ptr);
+}
+int main() {
+    solve();
+	return 0;
+}
+
+
+
+
+Check Answer
+Explanation: Since the set function makes a copy of the original pointer, the changes are not reflected back to the original pointer *ptr. Now, if the pointer *ptr points to a random memory location before and after the set function, when we try to dereference it, the program may crash.
+
+42. 
+Which of the following will occur if we call the free() function on a NULL pointer?
+
+
+
+
+
+Check Answer
+Explanation: Calling the free() function on a NULL pointer is totally valid and will not cause any error.
+
+43. 
+Which of the following should be used to free memory from a pointer allocated using the “new” operator?
+
+
+
+
+
+Check Answer
+Explanation: The delete keyword is used to free memory from a pointer allocated using the new keyboard.
+
+44. 
+Which data structure is used to handle recursion in C?
+
+
+
+
+
+Check Answer
+Explanation: Stacks are used to handling recursion in C.
+
+45. 
+What will be the output of the following code snippet?
+
+#include <stdio.h>
+#define CUBE(x) x * x * x
+void solve() {
+    int ans = 216 / CUBE(3);
+    printf("%d", ans);
+}
+int main() {
+    solve();
+	return 0;
+}
+
+
+
+
+Check Answer
+Explanation: The macros are first written out exactly as labeled before the value of the expression is calculated. So the expression evaluates to (216 / 3) * 3 *3 = 648.
+
+46. 
+What will be the output of the following code snippet?
+
+#include <stdio.h>
+struct School {
+    int age, rollNo;
+};
+void solve() {
+    struct School sc;
+    sc.age = 19;
+    sc.rollNo = 82;
+    printf("%d %d", sc.age, sc.rollNo);
+}
+int main() {
+    solve();
+	return 0;
+}
+
+
+
+
+Check Answer
+Explanation: The above code snippet assigns and then prints the contents of the struct given in the code.
+
+47. 
+Which of the following is not true about structs in C?
+
+
+
+
+
+Check Answer
+Explanation: Functions are not allowed inside structs in C.
+
+48. 
+What will be the output of the following code snippet?
+
+#include <stdio.h>
+struct School {
+    int age, rollNo;
+};
+void solve() {
+    struct School sc;
+    sc.age = 19;
+    sc.rollNo = 82;
+    printf("%d", (int)sizeof(sc));
+}
+int main() {
+    solve();
+	return 0;
+}
+
+
+
+
+Check Answer
+Explanation: The size of a struct is equal to the sum of the sizes of its individual variables. With 2 integer types, the size is 4 + 4  = 8bytes.
+
+49. 
+ What will be the output of the following code snippet?
+
+#include <stdio.h>
+union School {
+    int age, rollNo;
+    double marks;
+};
+void solve() {
+    union School sc;
+    sc.age = 19;
+    sc.rollNo = 82;
+    sc.marks = 19.04;
+    printf("%d", (int)sizeof(sc));
+}
+int main() {
+    solve();
+	return 0;
+}
+
+
+
+
+Check Answer
+Explanation: The size of a Union is equal to the size of the largest variable which is a part of it. Here the variable is double which of size 8bytes.
+
+50. 
+What will be the output of the following code snippet?
+
+#include <stdio.h>
+#include<string.h>
+void solve() {
+    char s[] = "Hello";
+    printf("%s ", s);
+    char t[40];
+    strcpy(t, s);
+    printf("%s", t);
+}
+int main() {
+    solve();
+	return 0;
+}
